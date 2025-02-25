@@ -77,6 +77,21 @@ public class DoubleyLL {
         return val;
     }
 
+    // reversing doubley linked list
+    void reverse() {
+        Node curr = head;
+        Node prev = null;
+        Node next;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            curr.prev = next;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
     // Displaying the linked list
     void display() {
         Node temp = head;
@@ -98,11 +113,13 @@ public class DoubleyLL {
         // dl.addLast(5);
         // dl.display();
         // System.out.println(size);
-        dl.removeLast();
-        dl.display();
-        System.out.println(size);
+        // dl.removeLast();
+        // dl.display();
+        // System.out.println(size);
         // dl.removeFirst();
         // dl.display();
         // System.out.println(size);
+        dl.reverse();
+        dl.display();
     }
 }
