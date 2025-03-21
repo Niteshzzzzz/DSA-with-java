@@ -21,9 +21,7 @@ public class unionOfTwoArray {
         for(int i = 0; i < b.length; i++){
            arr[a.length +i] = b[i];       
         }
-        for(int i = 0; i < arr.length; i++){
-           System.out.print(arr[i]+ " ");
-        }
+        
         int max = arr[0];
         for(int i = 1; i < arr.length; i++){
             if(arr[i] > max){
